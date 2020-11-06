@@ -1,0 +1,86 @@
+$space-1x: 8px;
+$space-2x: 16px;
+$primary-color: #6558F6;
+$white-color: #fff;
+$gray-color: #ccc;
+$background-color: #F0F4F7;
+$font-color: #444;
+
+* {
+  font-family: Lato;
+  color: $font-color;
+}
+
+body {
+  padding: $space-2x;
+  margin: 0;
+  background-color: $background-color;
+}
+
+.card {
+  padding: $space-2x;
+  margin: 0 0 $space-2x 0;
+  border: 1px solid $gray-color;
+  background-color: $white-color;
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid $gray-color;
+    padding: 0 0 $space-1x 0;
+
+    > svg {
+      cursor: pointer;
+    }
+
+    &-title {
+      font-size: $space-2x;
+    }
+    
+    &-container {
+      display: flex;
+      align-items: center;
+
+      > * {
+        margin: 0 $space-2x 0 0;
+      }
+    }
+  }
+
+  &__body {
+    margin: $space-2x 0 0 0;
+
+    p {
+      font-size: 14px;
+    }
+  }
+
+  &__footer {
+    margin: $space-2x 0 0 0;
+    display: flex;
+    justify-content: flex-end;
+
+    .card__button {
+      margin: 0 0 0 $space-1x;
+    }  
+  }
+
+  &__button {
+    padding: $space-1x;
+    border: none;
+    border-radius: 3px;
+    background-color: transparent;
+    cursor: pointer;
+
+    &--primary {
+      color: $white-color;
+      background-color: $primary-color;
+    }
+
+    &--default {
+      color: $primary-color;
+      border: 1px solid $primary-color;
+    }
+  }
+}
